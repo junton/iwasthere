@@ -29,7 +29,7 @@ namespace iwasthere.Controllers
                 return HttpNotFound();
             }
 
-            Place place = _context.Place.Single(m => m.ID == id);
+            Place place = _context.Place.Single(m => m.Id == id);
             if (place == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace iwasthere.Controllers
                 return HttpNotFound();
             }
 
-            Place place = _context.Place.Single(m => m.ID == id);
+            Place place = _context.Place.Single(m => m.Id == id);
             if (place == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace iwasthere.Controllers
                 return HttpNotFound();
             }
 
-            Place place = _context.Place.Single(m => m.ID == id);
+            Place place = _context.Place.Single(m => m.Id == id);
             if (place == null)
             {
                 return HttpNotFound();
@@ -111,7 +111,7 @@ namespace iwasthere.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Place place = _context.Place.Single(m => m.ID == id);
+            Place place = _context.Place.Single(m => m.Id == id);
             _context.Place.Remove(place);
             _context.SaveChanges();
             return RedirectToAction("Index");

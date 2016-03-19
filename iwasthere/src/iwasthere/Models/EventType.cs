@@ -5,11 +5,7 @@ using System.Threading.Tasks;
 
 namespace iwasthere.Models
 {
-    public class Event
+    public class EventType
     {
-        public int Id { get; set; }
-        public Place Place {get; set;}
-        public DateTime? Date { get; set; }
-
     }
 }

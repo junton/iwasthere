@@ -29,7 +29,7 @@ namespace iwasthere.Controllers
                 return HttpNotFound();
             }
 
-            PublicEvent publicEvent = _context.PublicEvent.Single(m => m.ID == id);
+            PublicEvent publicEvent = _context.PublicEvent.Single(m => m.Id == id);
             if (publicEvent == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace iwasthere.Controllers
                 return HttpNotFound();
             }
 
-            PublicEvent publicEvent = _context.PublicEvent.Single(m => m.ID == id);
+            PublicEvent publicEvent = _context.PublicEvent.Single(m => m.Id == id);
             if (publicEvent == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace iwasthere.Controllers
                 return HttpNotFound();
             }
 
-            PublicEvent publicEvent = _context.PublicEvent.Single(m => m.ID == id);
+            PublicEvent publicEvent = _context.PublicEvent.Single(m => m.Id == id);
             if (publicEvent == null)
             {
                 return HttpNotFound();
@@ -111,7 +111,7 @@ namespace iwasthere.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            PublicEvent publicEvent = _context.PublicEvent.Single(m => m.ID == id);
+            PublicEvent publicEvent = _context.PublicEvent.Single(m => m.Id == id);
             _context.PublicEvent.Remove(publicEvent);
             _context.SaveChanges();
             return RedirectToAction("Index");
