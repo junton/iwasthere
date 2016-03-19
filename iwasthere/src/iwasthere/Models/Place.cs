@@ -5,18 +5,15 @@ using System.Threading.Tasks;
 
 namespace iwasthere.Models
 {
-    public class Place : Event
+    public class Place
     {
-        public PlaceType Type { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string ZipCode { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
         public string Address { get; set; }
         public string Name { get; set; }
-
-    }
-    public enum PlaceType
-    {
-        Restaurant,
-        Museum,
-        Landmark,
-        Other,
+        public int Id { get; internal set; }
     }
 }

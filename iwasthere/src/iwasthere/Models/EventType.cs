@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace iwasthere.Models
 {
-    public class EventType
+    public enum EventType
     {
+        Meal,
+        Concert,
+        Museum,
+        Landmark,
+        Other
     }
 }
